@@ -11,7 +11,7 @@ pd.DataFrame(data_teste).to_excel("meu_extrato.xlsx", index=False)
 
 # --- PASSO 1: Execução do Fluxo de Dados ---
 try:
-    print("Iniciando análise...")
+    print("\nIniciando análise...")
     
     # Carrega e limpa usando o módulo
     dados = analisador.carregar_e_limpar("meu_extrato.xlsx")
@@ -23,13 +23,13 @@ try:
     mensal = analisador.obter_resumo_mensal(dados)
     
     # Exibe no terminal
-    print("\nResumo encontrado por categoria:")
-    print(resumo)
-    print("\nResumo encontrado por mes:")
-    print(mensal)
+    print("\nResumo encontrado por categoria:\n")
+    print(resumo.reset_index().to_string(index=False))
+    print("\nResumo encontrado por mes:\n")
+    print(mensal.reset_index().to_string(index=False))
     
     # PASSO NOVO: Gera a visualização
-    print("\nGerando gráfico de visualização...")
+    print("\nGerando gráfico de visualização...\n")
     analisador.gerar_grafico_gastos(resumo)
 
 except Exception as e:
