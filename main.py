@@ -16,12 +16,17 @@ try:
     # Carrega e limpa usando o módulo
     dados = analisador.carregar_e_limpar("meu_extrato.xlsx")
     
-    # Processa os gastos
+    # Processa os gastos por categoria
     resumo = analisador.gastos_por_categoria(dados)
+
+    # Processa os gastos mensais
+    mensal = analisador.obter_resumo_mensal(dados)
     
     # Exibe no terminal
-    print("\nResumo encontrado:")
+    print("\nResumo encontrado por categoria:")
     print(resumo)
+    print("\nResumo encontrado por mes:")
+    print(mensal)
     
     # PASSO NOVO: Gera a visualização
     print("\nGerando gráfico de visualização...")
