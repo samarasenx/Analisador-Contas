@@ -26,6 +26,7 @@ O foco principal aqui foi aplicar **boas práticas de engenharia de dados**, com
 ├── main.py              # Script de Execução (Orquestrador do fluxo)
 ├── meu_extrato.xlsx     # Dataset de entrada (Gerado automaticamente para teste)
 └── README.md            # Documentação do projeto
+```
 
 ## ⚙️ Como Instalar e Rodar
 
@@ -33,6 +34,7 @@ O foco principal aqui foi aplicar **boas práticas de engenharia de dados**, com
    ```bash
    git clone [https://github.com/samarasenx/Analisador-Contas.git](https://github.com/samarasenx/Analisador-Contas.git)
    cd Analisador-Contas
+    ```
 
 2. **Crie um ambiente virtual (opcional, mas recomendado):**
     ```bash
@@ -41,11 +43,14 @@ O foco principal aqui foi aplicar **boas práticas de engenharia de dados**, com
     venv\Scripts\activate
     # No Linux/Mac:
     source venv/bin/activate
+    ```
 
 3. **Instale as dependências:**
     ```bash
     pip install pandas matplotlib openpyxl
+    ```
 
 4. **Execute a aplicação:**
     ```bash
     python main.py
+    ```
